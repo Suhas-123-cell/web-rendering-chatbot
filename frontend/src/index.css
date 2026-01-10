@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50;
+}
+
+/* Custom Scrollbar for Chat Messages */
+@layer components {
+  .custom-scrollbar {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #a0aec0 #edf2f7; /* Firefox: thumb track */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #e2e8f0; /* Light gray for track */
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #94a3b8; /* Medium gray for thumb */
+    border-radius: 10px;
+    border: 2px solid #e2e8f0; /* Space around thumb */
+  }
+}
